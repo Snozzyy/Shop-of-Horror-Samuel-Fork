@@ -10,22 +10,13 @@ public class Merchandise {
         price = priceIn;
         unitsLeft = unitsLeftIn;
         unitsCounter = 0;
-
-
-
-
     }
 
     public double soldUnit(){
         this.unitsCounter++;
         this.unitsLeft--;
         return this.price;
-
-
-
-
     }
-
 
     public void setPrice(double price) {
         this.price = price;

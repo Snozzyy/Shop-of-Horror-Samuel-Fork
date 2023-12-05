@@ -6,7 +6,6 @@ public class OnSaleMerchandise extends Merchandise {
 
         super(productNameIn, priceIn, unitsLeftIn);
         discountpercentage = discountpercentageIn;
-
     }
 
     public double getDiscountpercentage() {
@@ -25,5 +24,4 @@ public class OnSaleMerchandise extends Merchandise {
     public double getPrice() {
         return super.getPrice()*(1-discountpercentage);
     }
-
 }

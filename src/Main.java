@@ -13,7 +13,6 @@ public class Main {
         /*We instatiate it as invalid input*/
         int input = -3;
 
-
         /*This will loop while session is not over*/
         while(!sessionIsOver){
             /*This prints the menu with its current data at the start of every loop*/
@@ -29,30 +28,12 @@ public class Main {
                  input = scan.nextInt();
                 if(input > 0 && input < 5){
                     inputValid = true;
-
-
-
-
-
-
-
                 }
                 else{
                     System.out.println("Vänligen skriv in en siffra 1-4");
-
-
-
-
                 }
-
-
-
-
-
             }
             /*When we have obtained validated input we know that the 1 <=int <=4, we can use a switch case*/
-
-
 
             switch (input){
 
@@ -64,25 +45,12 @@ public class Main {
                 case 3: cust1.addToTotalCost(fakeBloodz.soldUnit()); System.out.println("Du har köpt varor för: " + cust1.getTotalCost()+" kr."); break;
 
                 case 4: sessionIsOver = true; break;
-
-
-
             }
-
-
-
-
-
-
-
         }
         System.out.println("Du har köpt produkter för: " +Math.round(cust1.getTotalCost()) + "kr");
         System.out.println("Du köpte " +masks.getUnitsCounter()+" antal"+masks.getProductName()+"(er)");
         System.out.println("Du köpte "+knives.getUnitsCounter()+" "+ " antal blooodiga "+ knives.getProductName()+"-paket");
         System.out.println("Du köpte " + fakeBloodz.getUnitsCounter()+" "+ fakeBloodz.getProductName()+"-paket och sparade "+Math.round(fakeBloodz.getUnitsCounter()*fakeBloodz.price*fakeBloodz.getDiscountpercentage())+" kr!");
         System.out.println("Välkommen åter!");
-
-
-
     }
 }

@@ -3,15 +3,9 @@ public class Customer {
     private int unitsBought;
 
     public Customer(){
-
         /*When a customer starts the session cost and boughtunits should be zero*/
         totalCost = 0;
         unitsBought = 0;
-
-
-
-
-
     }
 
     public void addToTotalCost(double totalCost) {
