@@ -3,6 +3,7 @@ import java.util.Scanner;
 public class Main {
     public static void main(String[] args) {
         /*This boolean changes when the user wants to quit the session and terminates our while-loop*/
+        // new GUI();
         boolean sessionIsOver = false;
 
         Customer cust1 = new Customer();
@@ -10,7 +11,7 @@ public class Main {
         Merchandise knives = new Merchandise("Kniv", 300, 22);
         OnSaleMerchandise fakeBloodz = new OnSaleMerchandise("Fake Blood",199.9,29,0.35);
         Scanner scan = new Scanner(System.in);
-        /*We instatiate it as invalid input*/
+        /*We instantiate it as invalid input*/
         int input = -3;
 
         /*This will loop while session is not over*/

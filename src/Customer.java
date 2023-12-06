@@ -3,7 +3,7 @@ public class Customer {
     private int unitsBought;
 
     public Customer(){
-        /*When a customer starts the session cost and boughtunits should be zero*/
+        /*When a customer starts the session cost and bought units should be zero*/
         totalCost = 0;
         unitsBought = 0;
     }
@@ -12,15 +12,7 @@ public class Customer {
         this.totalCost += totalCost;
     }
 
-    public void setUnitsBought(int unitsBought) {
-        this.unitsBought = unitsBought;
-    }
-
     public double getTotalCost() {
         return totalCost;
-    }
-
-    public int getUnitsBought() {
-        return unitsBought;
     }
 }

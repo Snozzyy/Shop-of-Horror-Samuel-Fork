@@ -5,7 +5,6 @@ public class Merchandise {
     /*We can use this to count up the number of certain products bought */
     protected int unitsCounter;
     public Merchandise(String productNameIn, double priceIn, int unitsLeftIn){
-
         productName = productNameIn;
         price = priceIn;
         unitsLeft = unitsLeftIn;
