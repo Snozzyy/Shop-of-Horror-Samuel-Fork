@@ -13,21 +13,14 @@ public class Merchandise {
     }
 
     public double soldUnit(){
-        this.unitsCounter++;
-        this.unitsLeft--;
-        return this.price;
-    }
-
-    public void setPrice(double price) {
-        this.price = price;
-    }
-
-    public void setProductName(String productName) {
-        this.productName = productName;
-    }
-
-    public void setUnitsLeft(int unitsLeft) {
-        this.unitsLeft = unitsLeft;
+        if (unitsLeft > 0) {
+            this.unitsCounter++;
+            this.unitsLeft--;
+            return this.price;
+        } else {
+            System.out.println("Varan finns ej i lager");
+            return 0;
+        }
     }
 
     public double getPrice() {

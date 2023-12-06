@@ -16,9 +16,12 @@ public class Main {
         /*This will loop while session is not over*/
         while(!sessionIsOver){
             /*This prints the menu with its current data at the start of every loop*/
-            System.out.println("1. "+masks.getProductName()+": "+masks.getPrice()+ "kr,"+masks.getUnitsLeft()+" antal masker kvar");
-            System.out.println("2. "+knives.getProductName()+": "+knives.getPrice()+ "kr,"+knives.getUnitsLeft()+" antal blooooodiga knivar kvar");
-            System.out.println("3. "+fakeBloodz.getProductName()+": "+fakeBloodz.getPrice()+ "kr,"+fakeBloodz.getUnitsLeft()+" antal masker kvar");
+            System.out.printf("1. %s: %.1fkr, %d antal masker kvar\n",
+                    masks.getProductName(), masks.getPrice(), masks.getUnitsLeft());
+            System.out.printf("2. %s: %.1fkr, %d antal blooooodiga knivar kvar\n",
+                    knives.getProductName(), knives.getPrice(), knives.getUnitsLeft());
+            System.out.printf("3. %s: %.1fkr, %d antal blodpaket kvar\n",
+                    fakeBloodz.getProductName(), fakeBloodz.getPrice(), fakeBloodz.getUnitsLeft());
             System.out.println("4. Avsluta och betala");
             /*This boolean represents that we have gotten valid input for the current while loop*/
             boolean inputValid = false;
@@ -51,7 +54,7 @@ public class Main {
         }
 
         double moneySaved = Math.round(fakeBloodz.getUnitsCounter()*fakeBloodz.price*fakeBloodz.
-                getDiscountpercentage());
+                getDiscountPercentage());
 
         System.out.printf("Du har köpt produkter för: %dkr\n", Math.round(cust1.getTotalCost()));
         System.out.printf("Du köpte %d antal %s(er)\n", masks.getUnitsCounter(), masks.getProductName());

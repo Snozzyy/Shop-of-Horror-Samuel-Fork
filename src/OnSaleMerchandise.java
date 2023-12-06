@@ -1,15 +1,15 @@
 public class OnSaleMerchandise extends Merchandise {
 
-    private double discountpercentage;
+    private double discountPercentage;
 
-    public OnSaleMerchandise(String productNameIn, double priceIn, int unitsLeftIn,double discountpercentageIn){
+    public OnSaleMerchandise(String productNameIn, double priceIn, int unitsLeftIn,double discountPercentageIn){
 
         super(productNameIn, priceIn, unitsLeftIn);
-        discountpercentage = discountpercentageIn;
+        discountPercentage = discountPercentageIn;
     }
 
-    public double getDiscountpercentage() {
-        return discountpercentage;
+    public double getDiscountPercentage() {
+        return discountPercentage;
     }
 
     @Override
@@ -22,6 +22,6 @@ public class OnSaleMerchandise extends Merchandise {
 
     @Override
     public double getPrice() {
-        return super.getPrice()*(1-discountpercentage);
+        return super.getPrice()*(1- discountPercentage);
     }
 }
