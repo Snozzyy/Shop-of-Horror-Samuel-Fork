@@ -40,17 +40,25 @@ public class Main {
                 case 1: cust1.addToTotalCost(masks.soldUnit());
                     System.out.println("Du har köpt varor för: " + cust1.getTotalCost()+" kr."); break;
 
-                case 2: cust1.addToTotalCost(knives.soldUnit());System.out.println("Du har köpt varor för: " + cust1.getTotalCost()+" kr."); break;
+                case 2: cust1.addToTotalCost(knives.soldUnit());System.out.println("Du har köpt varor för: " +
+                        cust1.getTotalCost()+" kr."); break;
 
-                case 3: cust1.addToTotalCost(fakeBloodz.soldUnit()); System.out.println("Du har köpt varor för: " + cust1.getTotalCost()+" kr."); break;
+                case 3: cust1.addToTotalCost(fakeBloodz.soldUnit()); System.out.println("Du har köpt varor för: " +
+                        cust1.getTotalCost()+" kr."); break;
 
                 case 4: sessionIsOver = true; break;
             }
         }
-        System.out.println("Du har köpt produkter för: " +Math.round(cust1.getTotalCost()) + "kr");
-        System.out.println("Du köpte " +masks.getUnitsCounter()+" antal"+masks.getProductName()+"(er)");
-        System.out.println("Du köpte "+knives.getUnitsCounter()+" "+ " antal blooodiga "+ knives.getProductName()+"-paket");
-        System.out.println("Du köpte " + fakeBloodz.getUnitsCounter()+" "+ fakeBloodz.getProductName()+"-paket och sparade "+Math.round(fakeBloodz.getUnitsCounter()*fakeBloodz.price*fakeBloodz.getDiscountpercentage())+" kr!");
+
+        double moneySaved = Math.round(fakeBloodz.getUnitsCounter()*fakeBloodz.price*fakeBloodz.
+                getDiscountpercentage());
+
+        System.out.printf("Du har köpt produkter för: %dkr\n", Math.round(cust1.getTotalCost()));
+        System.out.printf("Du köpte %d antal %s(er)\n", masks.getUnitsCounter(), masks.getProductName());
+        System.out.printf("Du köpte %d antal blooodiga %s-paket\n", knives.getUnitsCounter(), knives.getProductName());
+        System.out.printf("Du köpte %d %s-paket och sparade %fkr\n", fakeBloodz.getUnitsCounter(),
+                fakeBloodz.getProductName(), moneySaved);
+
         System.out.println("Välkommen åter!");
     }
 }
