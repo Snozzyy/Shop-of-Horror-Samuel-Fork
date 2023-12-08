@@ -5,7 +5,6 @@ public class OnSaleMerchandise extends Merchandise {
     public OnSaleMerchandise(String productNameIn, double priceIn, int unitsLeftIn,double discountPercentageIn){
         super(productNameIn, priceIn, unitsLeftIn);
         discountPercentage = discountPercentageIn;
-
         discountedPrice();
     }
 
@@ -13,6 +12,7 @@ public class OnSaleMerchandise extends Merchandise {
         return discountPercentage;
     }
 
+    // Calculates the discounted price
     private void discountedPrice() {
         price = price * (1 - discountPercentage);
     }
