@@ -5,11 +5,11 @@ public class Shop {
     private static Merchandise masks = new Merchandise("Mask", 250, 2);
     private static Merchandise knives = new Merchandise("Kniv", 300, 22);
     private static OnSaleMerchandise fakeBloodz = new OnSaleMerchandise("Fake Blood", 1100, 29, 0.1);
-    boolean sessionIsOver = false; // Used to control whether session is over or not
+    private boolean sessionIsOver = false; // Used to control whether session is over or not
     int input;
     Scanner sc;
 
-    Shop() {
+    public Shop() {
         sc = new Scanner(System.in);
         // As long as sessionIsOver is false, run the program
         do {
@@ -20,7 +20,7 @@ public class Shop {
     }
 
     // Prints the menu
-    static void storeMenu() {
+    private static void storeMenu() {
         System.out.printf("\n1. %s: %.1fkr, %d antal masker kvar\n",
                 masks.getProductName(), masks.getPrice(), masks.getUnitsLeft());
 
