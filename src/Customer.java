@@ -1,7 +1,7 @@
 public class Customer {
     private double totalCost;
 
-    public Customer(){
+    public Customer() {
         // When a customer starts the session cost and bought units should be zero
         totalCost = 0;
     }
@@ -12,5 +12,9 @@ public class Customer {
 
     public double getTotalCost() {
         return totalCost;
+    }
+
+    public void undoPurchase(double price) {
+        totalCost -= price;
     }
 }

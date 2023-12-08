@@ -3,14 +3,15 @@ public class Merchandise {
     protected double price;
     protected int unitsLeft;
     protected int unitsCounter; // We can use this to count up the number of certain products bought
-    public Merchandise(String productNameIn, double priceIn, int unitsLeftIn){
+
+    public Merchandise(String productNameIn, double priceIn, int unitsLeftIn) {
         productName = productNameIn;
         price = priceIn;
         unitsLeft = unitsLeftIn;
         unitsCounter = 0;
     }
 
-    public double soldUnit(){
+    public double soldUnit() {
         if (unitsLeft > 0) {
             this.unitsCounter++;
             this.unitsLeft--;
@@ -35,5 +36,10 @@ public class Merchandise {
 
     public int getUnitsCounter() {
         return unitsCounter;
+    }
+
+    public void undoPurchase() {
+        unitsLeft++;
+        unitsCounter--;
     }
 }

@@ -1,11 +1,23 @@
 public class OnSaleMerchandise extends Merchandise {
 
     private final double discountPercentage;
+    private double discountedPrice;
 
-    public OnSaleMerchandise(String productNameIn, double priceIn, int unitsLeftIn,double discountPercentageIn){
-        super(productNameIn, priceIn, unitsLeftIn);
-        discountPercentage = discountPercentageIn;
+    public OnSaleMerchandise(String productName, double price, int unitsLeft, double discountPercentage) {
+        super(productName, price, unitsLeft);
+        this.discountPercentage = discountPercentage;
         discountedPrice();
+    }
+
+    public double soldUnit() {
+        if (unitsLeft > 0) {
+            unitsCounter++;
+            unitsLeft--;
+            return discountedPrice;
+        } else {
+            System.out.println("Varan finns ej i lager");
+            return 0;
+        }
     }
 
     public double getDiscountPercentage() {
@@ -14,6 +26,10 @@ public class OnSaleMerchandise extends Merchandise {
 
     // Calculates the discounted price
     private void discountedPrice() {
-        price = price * (1 - discountPercentage);
+        discountedPrice = price * (1 - discountPercentage);
+    }
+
+    public double getDiscountedPrice() {
+        return discountedPrice;
     }
 }
