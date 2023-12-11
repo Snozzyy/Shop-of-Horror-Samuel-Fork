@@ -3,4 +3,4 @@
 * Optimized code
 * Removed unnecessary and redundant code
 * Added new function
-  *possibility to undo purchases
+  - possibility to undo purchases
